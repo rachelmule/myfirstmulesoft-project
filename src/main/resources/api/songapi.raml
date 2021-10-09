@@ -1,0 +1,35 @@
+#%RAML 1.0
+title: songapi
+baseUri: http://localhost:8081/api
+/songdetails:
+  get:
+    queryParameters:
+      song id:
+        required: true
+        type: integer
+    responses:
+      200:
+       body:
+        application/json:
+          example: 
+           {
+             "song id":1234
+           }
+/customer:
+  get:
+   queryParameters:
+    custid:
+      required: true
+      type: integer
+   responses:
+    200:
+      body:
+       application/json:
+        example:
+          {
+            custid:09876
+          }
+        
+           
+
+    
